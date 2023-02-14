@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="icon" href="/images/icon.png">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class=" bg-dark text-light">
+
+    <nav class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <input id="search" class=" text-light  form-control px-4 bg-dark brdr-color d-none" type="text"
+                        placeholder="search by item name">
+                </div>
+                <div class="col-md-6 d-flex justify-content-end align-items-center">
+                    <h5 id="registerLINK" class=" cursor-pointer mx-2 pt-2 ">Register</h5>
+                    <h5 id="loginLINK" class=" cursor-pointer mx-2 pt-2 ">Login</h5>
+                    <h5 id="logoutLINK" class=" cursor-pointer mx-2 pt-2 d-none">Logout</h5>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="loginSEC" class="login container d-block">
+        <input id="logEmail" class=" form-control my-4 px-4 bg-dark brdr-color text-light" type="email"
+            placeholder="Email">
+        <input id="logPassword" class=" form-control my-4 px-4 bg-dark brdr-color text-light" type="password"
+            placeholder="Password">
+        <button id="loginBTN" class="btn btn-primary mx-2 px-4 py-2" type="submit">Login</button>
+    </div>
+
+    <div id="registerSEC" class="register container d-none ">
+        <input id="regName" class=" form-control my-4 px-4 bg-dark brdr-color text-light" type="text"
+            placeholder="Name">
+        <input id="regPhone" class=" form-control my-4 px-4 bg-dark brdr-color text-light" type="text"
+            placeholder="Phone Number">
+        <input id="regEmail" class=" form-control my-4 px-4 bg-dark brdr-color text-light" type="email"
+            placeholder="Email">
+        <input id="regPassword" class=" form-control my-4 px-4 bg-dark brdr-color text-light" type="password"
+            placeholder="Password">
+        <div id="regWarning" class="text-warning text-center d-none">
+            *you are already registerd*
+        </div>
+        <div id="phoneWarning" class="text-warning text-center d-none">
+            *Invalid Phone Number*
+        </div>
+        <div id="emailWarning" class="text-warning text-center d-none">
+            *Invalid Email*
+        </div>
+        <div id="passwordWarning" class="text-warning text-center d-none">
+            *Invalid Password at least 8 charachter*
+        </div>
+        <button id="registerBTN" class="btn btn-primary mx-2 px-3 py-2" type="submit">Register</button>
+    </div>
+
+    <section id="addProductSEC" class="d-flex justify-content-center align-items-center d-none">
+        <div class="container d-flex flex-column ">
+            <select id="productCat" class="mb-4 mt-2 form-select w-50 bg-dark brdr-color text-light cursor-pointer">
+                <option value="category">
+                    Select Category :
+                </option>
+                <option value="GSL">
+                    General Sales List (GSL)
+                </option>
+                <option value="Pharmacy Medicines">
+                    Pharmacy Medicines
+                </option>
+                <option value="Prescription Only Medicines">
+                    Prescription Only Medicines
+                </option>
+                <option value="Controlled Drugs">
+                    Controlled Drugs
+                </option>
+            </select>
+
+            <input id="productName" class="form-control my-4 px-4 bg-dark brdr-color text-light" type="text"
+                placeholder="Name">
+
+            <input id="productCode" class="form-control my-4 px-4 bg-dark brdr-color text-light" type="text"
+                placeholder="Code">
+
+            <input id="productPrice" class="form-control my-4 px-4 bg-dark brdr-color text-light" type="text"
+                placeholder="Price">
+
+            <textarea id="productDesc" class="form-control my-4 px-4 pt-3 bg-dark brdr-color text-light" type="text"
+                placeholder="Description"></textarea>
+
+            <div id="addProductBTN" class=" d-block btn btn-info text-light w-md-25 mt-3 m-auto">Add Product</div>
+            <div id="updateProductBTN" class=" d-none btn btn-warning text-light w-md-25 mt-3 m-auto">Save Changes</div>
+        </div>
+    </section>
+
+    <section id="productsSEC" class="py-5 d-none">
+        <div class="container">
+            <div id="displayProduct" class="row gy-5">
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
